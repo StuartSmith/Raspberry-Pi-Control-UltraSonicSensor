@@ -8,7 +8,7 @@ How to control an Ultrasonic Sensor from a Raspberry Pi using Windows 10 IOT cor
 
 <h2> How an Ultrasonic Sensor Works</h2>
 <p>
-The ultra sonic works very simply. A micro computer sends a electric pulse to it. The ultrasonic sensor intern sends out a sound wave when it recieves the pulse. The sound wave bounces off an object and returns to the ultrasonic sensor. The ultrasonic sensor then send a pulse back to the listening GPIO pin of the micro computer. 
+A micro computer sends a electric pulse to ultrasonic sensor via a GPIO Pin. It intern sends out a sound wave when it recieves the pulse. The sound wave bounces off an object and returns to the ultrasonic sensor. It then send a pulse back to the listening GPIO pin of the micro computer, Raspberry Pi for this example. 
 </p>
 
 <h2> Wiring the Ultrasonic Sensor to the Raspberry Pi </h2>
