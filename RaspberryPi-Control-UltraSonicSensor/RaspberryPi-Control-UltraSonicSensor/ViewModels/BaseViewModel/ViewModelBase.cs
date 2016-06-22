@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace RaspberryPi_Control_UltraSonicSensor.ViewModels.BaseViewModel
 {
-    class ViewModelBase: INotifyPropertyChanged
+   public  class ViewModelBase: INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
 

@@ -34,8 +34,8 @@ namespace RaspberryPi_Control_UltraSonicSensor.UltraSonic
 
         public UltraSonicSensor()
         {
-            RaspberryGPIOpinEcho = RaspberryPiGPI0Pin.GPIO20;
-            RaspberryGPIOpinTrigger = RaspberryPiGPI0Pin.GPIO21;
+            RaspberryGPIOpinEcho = RaspberryPiGPI0Pin.GPIO21;
+            RaspberryGPIOpinTrigger = RaspberryPiGPI0Pin.GPIO20;
 
             GpioInit();
         }
@@ -77,14 +77,17 @@ namespace RaspberryPi_Control_UltraSonicSensor.UltraSonic
             mre.Wait(TimeSpan.FromMilliseconds(0.01));
             _triggerPin.Write(GpioPinValue.Low);
 
-           double AmountOfTimeForpulse  = WaitForReturnPulse(_echoPin);
+           double amountOfTimeForpulse  = WaitForReturnPulse(_echoPin);
+
+
+           double distanceToObjectInMeters = amountOfTimeForpulse * 343;
 
 
             return 0;
         }
 
         /// <summary>
-        /// The Speed of sound is 343 meters per second.
+        /// The Speed of sound is 343 meters per second (or 1,126 feet persecond).
         /// Since we are pointing sound at an object and bouncing it back we need to divide
         /// the amount of time by 2 for the sensor. For echo location sound travels 171 meters per second. If an
         /// object is 343 meters away the time to get to the object and return again is 2 seconds.  

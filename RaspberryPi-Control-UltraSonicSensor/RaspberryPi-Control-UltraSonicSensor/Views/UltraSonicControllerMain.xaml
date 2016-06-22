@@ -8,6 +8,21 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Click="{x:Bind viewModel.RetrieveDistance}" >Check Distance</Button>
+        <!--<Button Click="{x:Bind viewModel.RetrieveDistance}" >Check Distance</Button>-->
+
+        <RelativePanel >
+            <TextBlock x:Name="lblDescription" Text="Distance In Inches:" Foreground="blue" FontSize="21.333"></TextBlock>
+            <Rectangle RelativePanel.Below="lblDescription" Fill="Blue" HorizontalAlignment="Right" Height="2"  Stroke="Blue" VerticalAlignment="Bottom" Width="190"/>
+            <TextBlock x:Name="lblDistanceInInches"  
+                       Text="{x:Bind Path=viewModel.DistanceInInches}" 
+                       FontFamily="/Assets/Fonts/ufonts.com_checkbook.ttf#Checkbook" 
+                       FontSize="200"
+                       Foreground="Blue"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                       ></TextBlock>
+           
+        </RelativePanel>
+
     </Grid>
 </Page>
