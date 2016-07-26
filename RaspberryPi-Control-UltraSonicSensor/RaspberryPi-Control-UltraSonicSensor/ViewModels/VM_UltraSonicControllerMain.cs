@@ -16,8 +16,9 @@ namespace RaspberryPi_Control_UltraSonicSensor.ViewModels
 
         public VM_UltraSonicControllerMain()
         {
-            _ultraSonicSensor = new UltraSonicSensor();
 
+            //Create an ultra sonic sensor using GPIO Pin 20 for trigger and 21 for echo
+            _ultraSonicSensor = new UltraSonicSensor((int)RaspberryPiGPI0Pin.GPIO20, (int)RaspberryPiGPI0Pin.GPIO21);
 
             if (AnalyticsInfo.VersionInfo.DeviceFamily != "Windows.Desktop")
             {
@@ -25,16 +26,11 @@ namespace RaspberryPi_Control_UltraSonicSensor.ViewModels
                 {
                     while (true)
                     {
-                        await Task.Delay(1000);
-
-
+                        await Task.Delay(50);
                         await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
                         () =>
                         {
-
-                            double DistanceInMeters = _ultraSonicSensor.GetDistanceInMeters();
-                            double Inches = DistanceInMeters * _INCHES_IN_A_METER;
-                            DistanceInInches = Inches.ToString();
+                            DistanceInInches = ((int)_ultraSonicSensor.GetDistanceInInches).ToString();
                         });
 
                     }
@@ -50,16 +46,7 @@ namespace RaspberryPi_Control_UltraSonicSensor.ViewModels
 
         }
 
-        /// <summary>
-        /// Retrieve the distance to the object
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
-        public void RetrieveDistance(object sender, RoutedEventArgs args)
-        {
-            _ultraSonicSensor.GetDistanceInMeters();
-
-        }
+       
 
 
         private string _distanceInInches;

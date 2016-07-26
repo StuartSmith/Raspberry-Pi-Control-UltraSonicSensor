@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="RaspberryPi_Control_UltraSonicSensor.Views.UltraSonicControllerMain"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -11,10 +11,10 @@
         <!--<Button Click="{x:Bind viewModel.RetrieveDistance}" >Check Distance</Button>-->
 
         <RelativePanel >
-            <TextBlock x:Name="lblDescription" Text="Distance In Inches:" Foreground="blue" FontSize="21.333"></TextBlock>
+            <TextBlock x:ConnectionId='2' x:Name="lblDescription" Text="Distance In Inches:" Foreground="blue" FontSize="21.333"></TextBlock>
             <Rectangle RelativePanel.Below="lblDescription" Fill="Blue" HorizontalAlignment="Right" Height="2"  Stroke="Blue" VerticalAlignment="Bottom" Width="190"/>
-            <TextBlock x:Name="lblDistanceInInches"  
-                       Text="{x:Bind Path=viewModel.DistanceInInches, Mode=OneWay}" 
+            <TextBlock x:ConnectionId='3' x:Name="lblDistanceInInches"  
+                                                                                    
                        FontFamily="/Assets/Fonts/ufonts.com_checkbook.ttf#Checkbook" 
                        FontSize="200"
                        Foreground="Blue"
@@ -26,3 +26,4 @@
 
     </Grid>
 </Page>
+

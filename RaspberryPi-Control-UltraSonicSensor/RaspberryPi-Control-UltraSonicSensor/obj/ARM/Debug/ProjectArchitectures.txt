@@ -1,0 +1,1 @@
+C:\Github\RaspberryPi-Control-UltraSonicSensor\RaspberryPi-Control-UltraSonicSensor\RaspberryPi-Control-UltraSonicSensor\RaspberryPi-Control-UltraSonicSensor.csproj;arm
