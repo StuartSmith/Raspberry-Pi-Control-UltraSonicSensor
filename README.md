@@ -37,7 +37,7 @@ In one second, a sound wave will travel from an ultra sonic sensor to an object 
 
 </p>
 
-####Video of SG90
+####Video of Ultra sonic Sensor
 Click on the image to watch the video<br>
 [![Ultra sonic sensor in action](http://img.youtube.com/vi/W1CB5mVedls/0.jpg)](http://www.youtube.com/watch?v=W1CB5mVedls)
 
