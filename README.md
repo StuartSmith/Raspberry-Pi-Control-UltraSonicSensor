@@ -29,7 +29,9 @@ To wire the ultrasonic sensor to the Raspberry Pi,  4 GPIO pins are used: A Grou
 
 <h2> How to determine the distance using an Ultrasonic Sensor</h2>
 <p>
-Sound moves at 1,088 feet per second (332 meters per second).  Different air tempatures change the speed of sound but for this article, to keep things simple, we will assume sound moves at a constant speed no matter what the air temperature nor humidity is.
+Sound moves at 1,088 feet per second (332 meters per second).  Different air tempatures change the speed of sound but for this article, to keep things simple, we will assume sound moves at a constant speed no matter what the air temperature nor humidity is. To use a sound wave to determine distance the distance sound moves per second needs to be cut in half. The reason for this is we need to take into account not only sound traveling to the object but also it returning. So for this type of measurement we need to consider sound travels at 170 meters per second. 
+
+The amount of time, will be one second for a sound wave to travel from an ultra sonice sensor to an object 170 meters away and back again. If we wanted to know the amount of time sound travels to an object and back in inches rather than meters, we can apply some simple multiplication to figure this out. <h3>TimeinSeconds * 17000 / 2.5 <h3> equals the amount of distance sound traveled in inches. 
 </p>
 
 
