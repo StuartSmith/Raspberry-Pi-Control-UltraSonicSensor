@@ -72,10 +72,9 @@ The Ultra sonic Sensor  is controlled through one object  UltraSonicSensor, belo
             mre.WaitOne(100);
             Stopwatch pulseLength = new Stopwatch();
             Stopwatch TotalTime = new Stopwatch();
-
-
+            
             TotalTime.Start();
-
+            
             //Send pulse
             this.triggerPin.Write(GpioPinValue.High);
             mre.WaitOne(TimeSpan.FromMilliseconds(0.01));
@@ -94,8 +93,7 @@ The Ultra sonic Sensor  is controlled through one object  UltraSonicSensor, belo
 
             if (TotalTime.ElapsedMilliseconds >= 5000)
                 return -1;
-
-
+                
             //Calculating distance
             TimeSpan timeBetween = pulseLength.Elapsed;
             //Debug.WriteLine(timeBetween.ToString());
@@ -105,12 +103,10 @@ The Ultra sonic Sensor  is controlled through one object  UltraSonicSensor, belo
 
         public double GetDistanceInCentimeters => GetDistance() * 17000;
 
+        
         public double GetDistanceInInches => GetDistance() * 17000 / 2.5;
-
-
-
-       
-
+        
+        
         private double PulseIn(GpioPin echoPin, GpioPinValue value)
         {
             var t = Task.Run(() =>
@@ -139,8 +135,4 @@ The Ultra sonic Sensor  is controlled through one object  UltraSonicSensor, belo
                 return 0.0;
             }
         }
-
-
-
-
     }
