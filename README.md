@@ -46,8 +46,8 @@ Click on the image to watch the video<br>
 The Ultra sonic Sensor  is controlled through one object  UltraSonicSensor, below is the source code for this class.
 <br>
 
-  class UltraSonicSensor
-    {
+    class UltraSonicSensor
+      {
         private GpioPin triggerPin { get; set; }
         private GpioPin echoPin { get; set; }
         private Stopwatch timeWatcher;
