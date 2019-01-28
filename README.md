@@ -29,13 +29,14 @@ To wire the ultrasonic sensor to the Raspberry Pi,  4 GPIO pins are required: A 
 
 <h2> How to determine the distance using an Ultrasonic Sensor</h2>
 <p>
-Sound moves at 1,088 feet per second (332 meters per second).  Different air temperatures change the speed of sound but for this article, to keep things simple, we will assume sound moves at a constant speed no matter what the air temperature nor humidity is. 
+Sound moves at 1,088 feet per second (332 meters per second).  Different air temperatures change the speed of sound but for this article, to keep things simple, will assume sound moves at a constant speed no matter what the air temperature nor humidity is. 
 </p> 
 <p>
-To use a sound wave to determine distance to an object, we need to halve the speed at which sounds travels.  The reason for this is we need to not only consider the time it takes for the sound wave to travel to the object but also we need to include the time required for the for the sound wave to return to the sensor. For this measurement we need to consider sound travels at 170 meters per second.
+To use a sound wave to determine distance to an object, the sound speed travels will need to be cut in half.  The reason for this is one needs to not only consider the time for the sound wave to travel to the object but also  to include the time required for the for the sound wave to return to the sensor. For this measurement, consider sound travels at 170 meters per second.
 </p>
 <p>
-In one second, a sound wave will travel from an ultra sonic sensor to an object 170 meters away and back again. If we wanted to know the amount of time sound travels to an object and back in inches rather than meters, we can apply some simple multiplication. <p>TimeinSeconds * 17000 / 2.5 equals the amount of distance sound traveled in inches. </p>  
+In one second, a sound wave will travel from the ultra sonic sensor to an object 170 meters away and back again. If we wanted to know the amount of time sound travels to an object and back in inches rather than meters, we can apply some simple algebra to determine the formula. 
+<p>TimeinSeconds * 17000 / 2.5 equals the amount of distance sound traveled in inches. </p>  
 </p>
 
 
