@@ -8,18 +8,18 @@ How to control an Ultrasonic Sensor from a Raspberry Pi using Windows 10 IOT cor
 
 <h2> How an Ultrasonic Sensor Works</h2>
 <p>
-A micro computer sends a electric pulse to ultrasonic sensor via a GPIO Pin. It intern sends out a sound wave, The sound wave bounces off an object and returns to the ultrasonic sensor. The ultra sonic sensor then send a pulse back to the listening GPIO pin of the micro computer, Raspberry Pi for this example. 
+A micro computer sends a electric pulse to ultrasonic sensor via a GPIO Pin. It intern sends out a sound wave, The sound wave bounces off an object and returns to the ultrasonic sensor. The ultra sonic sensor then send a pulse back to the listening GPIO pin of the micro computer, raspberry pi for this example. 
 </p>
 
 <h2> Wiring the Ultrasonic Sensor to the Raspberry Pi </h2>
 <p>
-To wire the ultrasonic sensor to the Raspberry Pi,  4 GPIO pins are required: A Ground, a 5 volt power pin, and two 3 volt GPIO pins. A GPIO pin for the Raspberry Pi can only have 3.3 volts applied to any of it's GPIO pins and the ultrasonic has the capabilty to send 5 volts from the echo pin back to the GPIO Pin of the PI. To avoid the ultrasonic sensor from sending too much voltage to the GPIO pin of the Raspberry Pi, a 1 K Ohm resiter is inserted, to bring the voltage down to an correct level. 
+To wire the ultrasonic sensor to the raspberry pi,  4 GPIO pins are required: a Ground, a 5 volt power pin, and two 3 volt GPIO pins. A GPIO pin for the raspberry pi can only have 3.3 volts applied to any of it's GPIO pins and the ultrasonic has the capabilty to send 5 volts from the echo pin back to the GPIO Pin of the pi. To avoid the ultrasonic sensor from sending too much voltage to the GPIO pin of the raspberry pi, a 1 K Ohm resiter is inserted, to bring the voltage down to the correct level. 
 
 <ul>
-<li>The Five Volt Power Pin of the Pi connects to the VCC pin of the ultrasonic sensor (pin 2)</li>
-<li>The Gound Pin of the Pi connects to the GND pin of the ultrasonic sensor (pin 6)</li>
-<li>The GPIO Pin 20 of the Pi connects to the Trigger Pin of the ultrasonic sensor (pin 38)</li>
-<li>The GPIO Pin 21 of the Pi connects to the Echo Pin of the ultrasonic sensor (pin 40)</li>
+<li>The five volt power Pin of the raspberry pi connects to the VCC pin of the ultrasonic sensor (pin 2)</li>
+<li>The Gound Pin of the raspberry pi connects to the GND pin of the ultrasonic sensor (pin 6)</li>
+<li>The GPIO Pin 20 of the raspberry pi connects to the Trigger Pin of the ultrasonic sensor (pin 38)</li>
+<li>The GPIO Pin 21 of the raspberry pii connects to the Echo Pin of the ultrasonic sensor (pin 40)</li>
 </ul>
 
 </p>
@@ -27,9 +27,9 @@ To wire the ultrasonic sensor to the Raspberry Pi,  4 GPIO pins are required: A 
 
 
 
-<h2> How to determine the distance using an Ultrasonic Sensor</h2>
+<h2> How to determine the distance using an ultrasonic sensor</h2>
 <p>
-Sound moves at 1,088 feet per second (332 meters per second).  Different air temperatures change the speed of sound but for this article, to keep things simple, will assume sound moves at a constant speed no matter what the air temperature nor humidity is. 
+Sound moves at 1,088 feet per second (332 meters per second).  Different air temperatures change the speed of sound but for this article, to keep things simple, will assume sound moves at a constant speed, no matter what the air temperature nor humidity is. 
 </p> 
 <p>
 To use a sound wave to determine distance to an object, the sound speed travels will need to be cut in half.  The reason for this is one needs to not only consider the time for the sound wave to travel to the object but also  to include the time required for the for the sound wave to return to the sensor. For this measurement, consider sound travels at 170 meters per second.
