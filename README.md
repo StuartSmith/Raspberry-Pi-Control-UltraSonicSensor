@@ -4,7 +4,7 @@ How to control an Ultrasonic Sensor from a Raspberry Pi using Windows 10 IOT cor
 </p>
 <p>
 <img style="float:left;" src="https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-UltraSonicSensor/master/Images/UltraSonicWiringBySelf.jpg">
-<p>An ultrasonic sensor, is a sensor that uses sound waves to measure the distance to an object.</p>  
+<p>An ultrasonic sensor, is a sensor that uses sound waves to determine the distance to an object.</p>  
 
 <h2> How an Ultrasonic Sensor Works</h2>
 <p>
