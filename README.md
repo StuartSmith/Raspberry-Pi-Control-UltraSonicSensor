@@ -13,7 +13,7 @@ A micro computer sends a electric pulse to ultrasonic sensor via a GPIO Pin. The
 
 <h2> Wiring the Ultrasonic Sensor to the Raspberry Pi </h2>
 <p>
-To wire the ultrasonic sensor to the raspberry pi,  4 GPIO pins are required: a Ground, a 5 volt power pin, and two 3 volt pins. A GPIO pin for the raspberry pi can only have 3.3 volts applied to any of it's GPIO pins and the ultrasonic has the capabilty to send 5 volts from the echo pin back to the GPIO Pin of the pi. To avoid the ultrasonic sensor from sending too much voltage to the GPIO pin of the raspberry pi, a 1 K Ohm resiter is inserted, to bring the voltage down to the correct level. 
+To wire the ultrasonic sensor to the raspberry pi,  4 GPIO pins are required: a Ground, a 5 volt power pin, and two 3 volt pins. A GPIO pin for the raspberry pi can only have 3.3 volts applied to any of it's GPIO pins and the ultrasonic has the capabilty to send 5 volts from the echo pin back to the GPIO Pin of the pi. To avoid the ultrasonic sensor from sending too much voltage to the GPIO pin of the raspberry pi, a 1 K Ohm resistor is inserted, to bring the voltage down to the correct level. 
 
 <ul>
 <li>The five volt power Pin of the raspberry pi connects to the VCC pin of the ultrasonic sensor (pin 2)</li>
